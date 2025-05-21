@@ -123,6 +123,7 @@ export interface BoolConditionNode extends BaseNode {
 
 export interface ClickParameters extends HasSelector, HasLLM, IsInteractive {
   execution: ExecutionType
+  max_retries_with_reload?: number
 }
 
 export interface ClickNode extends BaseNode {
@@ -137,8 +138,6 @@ export interface EndNode extends BaseNode {
 export interface ExtractDatamodelNodeParameters extends HasSelector {
   execution?: ExecutionType
   extract_data_model?: JSONSchema
-  field_json_map?: string
-  url?: string
 }
 
 export interface ExtractDatamodelNode extends BaseNode {
@@ -172,6 +171,7 @@ export interface InputSelectParameters
     IsInteractive {
   fuzzy_match?: boolean
   value?: string
+  max_retries_with_reload?: number
 }
 
 export interface InputSelectNode extends BaseNode {
@@ -187,6 +187,7 @@ export interface InputTextParameters
   submit_after_input?: boolean
   text: string
   execution: ExecutionType
+  max_retries_with_reload?: number
 }
 
 export interface InputTextNode extends BaseNode {
