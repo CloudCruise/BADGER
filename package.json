@@ -1,0 +1,9 @@
+{
+  "name": "badger",
+  "version": "1.0.0",
+  "description": "BADGER project",
+  "main": "index.js",
+  "dependencies": {
+    "json-schema-typed": "^7.0.3"
+  }
+} 
