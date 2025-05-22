@@ -193,7 +193,9 @@ Let’s look at an example config!
 This automation logs into X (if needed), posts a comment, and exits. 
 One added benefit of the graph structure is that it's super easy to visualize:
 
-<img width="422" alt="Screenshot 2025-05-21 at 7 20 01 PM" src="https://github.com/user-attachments/assets/f56d5c09-bb64-48e2-be70-978b131e6ef9" />
+<p align="center">
+  <img width="422" alt="Screenshot 2025-05-21 at 7 20 01 PM" src="https://github.com/user-attachments/assets/f56d5c09-bb64-48e2-be70-978b131e6ef9" />
+</p>
 
 ## Technical Deep Dive
 
