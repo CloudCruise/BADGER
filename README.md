@@ -2,7 +2,7 @@
   <img
     src="https://github.com/user-attachments/assets/55011a85-64bc-42e1-af7b-7087622829b8"
     alt="BADGER_ICON"
-    width="500"
+    width="400"
   />
 </p>
 
@@ -10,7 +10,7 @@
 
 ## Reliable Browser Automation ≠ One-Off Scripts
 
-Playwright is fantastic—until your quick automation task devolves into hundreds of lines of loops, retries, and messy conditionals.
+Playwright is fantastic – until your quick automation task devolves into hundreds of lines of loops, retries, and messy conditionals.
 
 We hit this exact wall building robust form-filling bots. Instead of piling on more hacks, we asked: **What if automation logic was data, not code?**
 
