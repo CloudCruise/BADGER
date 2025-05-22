@@ -199,6 +199,8 @@ One added benefit of the graph structure is that it's super easy to visualize:
 
 ## Technical Deep Dive
 
+BADGER offer a lot of fields to customize the behavior of your browser automations. When applicable, we're trying to set good defaults. Here's a deep dive on the most important ones. 
+
 ### Workflow Fields
 
 * `use_native_actions`: Enables OS-level actions such as clicking and typing via a desktop application integration. This is particularly useful when standard JavaScript methods encounter issues with complex or secured web elements.
@@ -292,7 +294,7 @@ LLM-driven runtime prompting looks great in demos but fails in production. BADGE
   Workflows run as explicit, structured graphs. Predictable, debuggable, and fast.
 
 * **LLMs for targeted repair:**
-  When things break, only specific DSL nodes are regenerated—keeping fixes local and understandable.
+  When things break, only specific DSL nodes are regenerated – keeping fixes local and understandable.
 
 This approach lets you debug, version-control, and reliably scale browser automation workflows. 
 It combines LLM flexibility exactly where it’s needed, with predictable, maintainable execution everywhere else. 
