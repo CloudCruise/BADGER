@@ -199,7 +199,7 @@ One added benefit of the graph structure is that it's super easy to visualize:
 
 ## Technical Deep Dive
 
-BADGER offer a lot of fields to customize the behavior of your browser automations. When applicable, we're trying to set good defaults. Here's a deep dive on the most important ones. 
+BADGER offers a lot of fields to customize the behavior of your browser automations. When applicable, we're trying to set good defaults. Here's a deep dive on the most important ones. 
 
 ### Workflow Fields
 
