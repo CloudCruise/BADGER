@@ -1,0 +1,152 @@
+{
+  "id": "bc2d338f-3d19-4824-bbd9-fdf8b68416c5",
+  "workspace_id": "bc2d338f-3d19-4824-bbd9-fdf8b68416c5",
+  "version_id": "bc2d338f-3d19-4824-bbd9-fdf8b68416c5",
+  "version_number": 1,
+  "created_at": "2025-05-21T00:00:00Z",
+  "created_by": "user",
+  "name": "X: Comment",
+  "description": "Comment on a X tweet",
+  "input_schema": {
+    "$TWEET_URL": {
+      "type": "string",
+      "pattern": "^https://x.com/[^/]+/status/[^/]+$"
+    },
+    "$COMMENT": {
+      "type": "string"
+    },
+    "$USER_NAME": {
+      "type": "string"
+    },
+    "$PASSWORD": {
+      "type": "string"
+    },
+    "required": ["$TWEET_URL", "$COMMENT", "$USER_NAME", "$PASSWORD"]
+  },
+  "output_schema": {},
+  "nodes": [
+    {
+      "id": "41a01974-5d96-403d-bd4c-21f786bacf2b",
+      "name": "Navigate to X Tweet",
+      "action": "START",
+      "parameters": {
+        "url": "{$TWEET_URL}"
+      }
+    },
+    {
+      "id": "9df3a95e-0dd6-4115-98a3-3abf8b9b7f29",
+      "name": "Is logged in?",
+      "action": "BOOL_CONDITION",
+      "parameters": {
+        "execution": "STATIC",
+        "comparison_value_1": "<<xpath://input[@autocomplete='username']>>",
+        "comparison_value_2": null,
+        "comparison_operator": "IS_NULL",
+        "wait_time": 5000,
+        "clear_cookies_on_false": true
+      }
+    },
+    {
+      "id": "c73ffce4-4f02-42ca-bff8-afdc816e3ca6",
+      "name": "Type username",
+      "action": "INPUT_TEXT",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//input[@autocomplete='username']",
+        "text": "{$USER_NAME}",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "74052c6d-51be-4f1b-9fd5-304b5632eee3",
+      "name": "Click Next",
+      "action": "CLICK",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//button[normalize-space()='Next']",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "75f38414-62c8-453a-87d8-684847db0783",
+      "name": "Type password",
+      "action": "INPUT_TEXT",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//input[@type='password']",
+        "text": "{$PASSWORD}",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "c3c0e1d5-1d88-4319-a811-35ad9bf32d3f",
+      "name": "Click Log In",
+      "action": "CLICK",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//button[normalize-space()='Log in']",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "25382829-81ae-43bc-b7c6-1d6be6a09cfb",
+      "name": "Enter Comment",
+      "action": "INPUT_TEXT",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//div[@data-testid='tweetTextarea_0' and @aria-label='Post text']",
+        "text": "{$COMMENT}",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "b0ddd3b4-5197-4389-aedc-be37f96c1d44",
+      "name": "Hit Reply",
+      "action": "CLICK",
+      "parameters": {
+        "execution": "STATIC",
+        "selector": "//button[normalize-space()='Reply']",
+        "wait_time": 25000
+      }
+    },
+    {
+      "id": "e406fd72-85f9-4a28-bd09-0753cd8528fd",
+      "name": "End",
+      "action": "END",
+      "parameters": {}
+    }
+  ],
+  "edges": {
+    "41a01974-5d96-403d-bd4c-21f786bacf2b": {
+      "to": "9df3a95e-0dd6-4115-98a3-3abf8b9b7f29"
+    },
+    "9df3a95e-0dd6-4115-98a3-3abf8b9b7f29": {
+      "true": "25382829-81ae-43bc-b7c6-1d6be6a09cfb",
+      "false": "c73ffce4-4f02-42ca-bff8-afdc816e3ca6"
+    },
+    "c73ffce4-4f02-42ca-bff8-afdc816e3ca6": {
+      "to": "74052c6d-51be-4f1b-9fd5-304b5632eee3"
+    },
+    "74052c6d-51be-4f1b-9fd5-304b5632eee3": {
+      "to": "75f38414-62c8-453a-87d8-684847db0783"
+    },
+    "75f38414-62c8-453a-87d8-684847db0783": {
+      "to": "c3c0e1d5-1d88-4319-a811-35ad9bf32d3f"
+    },
+    "25382829-81ae-43bc-b7c6-1d6be6a09cfb": {
+      "to": "b0ddd3b4-5197-4389-aedc-be37f96c1d44"
+    },
+    "c3c0e1d5-1d88-4319-a811-35ad9bf32d3f": {
+      "to": "25382829-81ae-43bc-b7c6-1d6be6a09cfb"
+    },
+    "b0ddd3b4-5197-4389-aedc-be37f96c1d44": {
+      "to": "e406fd72-85f9-4a28-bd09-0753cd8528fd"
+    }
+  },
+  "use_native_actions": true,
+  "video_record_session": true,
+  "encrypted_keys": [],
+  "popup_xpaths": [],
+  "auth_urls": [],
+  "error_codes": []
+}
