@@ -16,8 +16,6 @@ We hit this exact wall building robust form-filling bots. Instead of piling on m
 
 The result is BADGER (Browser Automation Directed Graph Engine Ruleset) – a workflow DSL built around explicit, maintainable graphs of browser actions.
 
-Here’s why it makes reliable automation at scale achievable.
-
 ## Why Not Just Use Playwright?
 
 Playwright is powerful and intuitive, perfect for quick scripts. But when automations grow beyond simple use-cases, scripts quickly become:
