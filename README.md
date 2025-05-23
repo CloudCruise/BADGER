@@ -14,9 +14,19 @@ Playwright is fantastic – until your quick automation task devolves into hundr
 
 We hit this exact wall building robust form-filling bots. Instead of piling on more hacks, we asked: **What if automation logic was data, not code?**
 
-The result is **BADGER** (Browser Automation Directed Graph Engine Ruleset) – a workflow DSL built around explicit, maintainable graphs of browser actions.
+The result is BADGER (Browser Automation Directed Graph Engine Ruleset) – a workflow DSL built around explicit, maintainable graphs of browser actions.
 
-Here’s why it makes **reliable automation at scale** achievable.
+Here’s why it makes reliable automation at scale achievable.
+
+## Why Not Just Use Playwright?
+
+Playwright is powerful and intuitive, perfect for quick scripts. But when automations grow beyond simple use-cases, scripts quickly become:
+
+* **Hard to maintain:** Logic, retries, loops, and edge cases spiral into tangled, fragile code.
+* **Painful to debug:** Tracing errors through imperative scripts takes time. Root cause attribution is hard.
+* **Poorly reusable:** Mixing logic directly with implementation details makes reusing code difficult.
+
+BADGER was designed to solve for this.
 
 ## Automation as Data, Not Code
 
