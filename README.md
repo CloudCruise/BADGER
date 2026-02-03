@@ -12,7 +12,7 @@
 
 Playwright is fantastic – until your quick automation task devolves into hundreds of lines of loops, retries, and messy conditionals.
 
-We hit this exact wall building robust form-filling bots. Instead of piling on more hacks, we asked: **What if automation logic was data, not code?**
+We hit this exact wall building robust form-filling bots. Instead of piling on more hacks, we asked: **What if automation logic was a graph you could see, not a script you had to trace?**
 
 The result is BADGER (Browser Automation Directed Graph Engine Ruleset) – a workflow DSL built around explicit, maintainable graphs of browser actions.
 
@@ -26,9 +26,9 @@ Playwright is powerful and intuitive, perfect for quick scripts. But when automa
 
 BADGER was designed to solve for this.
 
-## Automation as Data, Not Code
+## Automation as Graphs, Not Scripts
 
-BADGER addresses Playwright’s scalability limitations by modeling automation as explicit graphs, turning browser actions and logic into structured data.
+BADGER addresses Playwright's scalability limitations by modeling automation as explicit, declarative graphs. Instead of burying control flow in imperative code, workflows become visible structures you can inspect, version, and debug node-by-node.
 
 Each workflow is a directed graph composed of:
 
